@@ -1,0 +1,245 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "8c844dd5-0a13-4d09-aeba-9948175cf4ad",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "compatible_node_versions": {
+      "name": "compatible_node_versions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "video_pipeline_id": {
+          "name": "video_pipeline_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "compatible_node_version": {
+          "name": "compatible_node_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "vehicles": {
+      "name": "vehicles",
+      "schema": "",
+      "columns": {
+        "streamer_uuid": {
+          "name": "streamer_uuid",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "vin": {
+          "name": "vin",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "video_pipelines": {
+      "name": "video_pipelines",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "streamer_uuid": {
+          "name": "streamer_uuid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "relay_uuid": {
+          "name": "relay_uuid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "node_uuid": {
+          "name": "node_uuid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "error": {
+          "name": "error",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "server_ip": {
+          "name": "server_ip",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "data_listen_port": {
+          "name": "data_listen_port",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "data_connection_port": {
+          "name": "data_connection_port",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "control_listen_port": {
+          "name": "control_listen_port",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "control_connection_port": {
+          "name": "control_connection_port",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "trampoline_listen_port": {
+          "name": "trampoline_listen_port",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "trampoline_connection_port": {
+          "name": "trampoline_connection_port",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rtc_https_url": {
+          "name": "rtc_https_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "node_https_url": {
+          "name": "node_https_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "node_wss_url": {
+          "name": "node_wss_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rtp_connection_url": {
+          "name": "rtp_connection_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "control_password": {
+          "name": "control_password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "trampoline_password": {
+          "name": "trampoline_password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "relay_version": {
+          "name": "relay_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "node_version": {
+          "name": "node_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "group": {
+          "name": "group",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allowAutomaticDeallocate": {
+          "name": "allowAutomaticDeallocate",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allowAutomaticAllocate": {
+          "name": "allowAutomaticAllocate",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "machine_identifier": {
+          "name": "machine_identifier",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "relay_set": {
+          "name": "relay_set",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
